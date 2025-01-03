@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
         playButton.SetActive(true);
         Pause();
+        GameOverScene();
     }
 
     public void IncreaseScore()
@@ -63,6 +64,11 @@ public class GameManager : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void GameOverScene() 
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void ExitGame()
